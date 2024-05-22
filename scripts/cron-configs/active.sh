@@ -5,7 +5,7 @@
 * * * * * ~/scripts/check-and-recover-from-crash.sh > ~/monitor.log 2>&1
 
 # backup game files every 5 minutes
-*/5 * * * * ~/scripts/backup-snapshot.sh > ~/backup.log 2>&1
+#*/5 * * * * ~/scripts/backup-snapshot.sh > ~/backup.log 2>&1
 
 # Edit this file to introduce tasks to be run by cron.
 #
