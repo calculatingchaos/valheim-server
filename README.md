@@ -1,22 +1,14 @@
-# Valheim Server
+# Team Valheim Server
 
 [![🚀 Prod Deploy](https://github.com/calculatingchaos/valheim-server/actions/workflows/prod-deploy.yml/badge.svg)](https://github.com/calculatingchaos/valheim-server/actions/workflows/prod-deploy.yml)
 
----
+## Introduction
 
-- [Valheim Server](#valheim-server)
-  - [Configuration](#configuration)
-    - [Presets](#presets)
-    - [Combat Settings](#combat-settings)
-    - [Death Penalty](#death-penalty)
-    - [Resource Rate Modifier](#resource-rate-modifier)
-    - [Raid Settings](#raid-settings)
-    - [Portal Settings](#portal-settings)
-  - [Global Keys](#global-keys)
-    - [The following keys can be set to modify game behavior](#the-following-keys-can-be-set-to-modify-game-behavior)
-    - [Following keys can be used to multiply a game setting](#following-keys-can-be-used-to-multiply-a-game-setting)
-    - [World Level](#world-level)
-  - [Resources](#resources)
+This server is set up for buddies to hang out and have fun.
+
+| Server Name | Password       |
+| ----------- | -------------- |
+| BogBaby     | secret4friends |
 
 ## Configuration
 
