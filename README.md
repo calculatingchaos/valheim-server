@@ -6,9 +6,9 @@
 
 This server is set up for buddies to hang out and have fun.
 
-| Server Name |     Password     |
-| :---------: | :--------------: |
-|  `BogBaby`  | `secret4friends` |
+| Server Name |     Password     |         Server URL          | Join Code |
+| :---------: | :--------------: | :-------------------------: | :-------: |
+|  `BogBaby`  | `secret4friends` | `calculatingchaos.com:2456` | `196785`  |
 
 ## Presets
 
