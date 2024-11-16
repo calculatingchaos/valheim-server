@@ -7,32 +7,32 @@ on:
   workflow_dispatch:
     inputs:
       logLevel:
-        description: 'Log level'
+        description: "Log level"
         required: true
-        default: 'warning'
+        default: "warning"
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-    - name: install ssh key # https://github.com/shimataro/ssh-key-action/ - support checkout of private repos
-      uses: shimataro/ssh-key-action@v2
-      with:
-        key: ${{ secrets.DEPLOY_KEY }}
-        known_hosts: ${{ secrets.KNOWN_HOSTS }}
-    - name: set up workspace
-      uses: actions/checkout@v4
-      with:
-        ssh-key: ${{ secrets.DEPLOY_KEY }}
-        submodules: true
-        show-progress: true
-    - name: force script execution permissions
-      run: chmod +x -R scripts/*
-    - name: rsync lgsm config deployment
-      run: rsync --port=${{ secrets.DEPLOY_PORT }} -avzr lgsm/ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:~/lgsm/
-    - name: rsync unity config deployment
-      run: rsync --port=${{ secrets.DEPLOY_PORT }} -avzr .config/ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:~/.config/
-    - name: rsync scripts deployment
-      run: rsync --port=${{ secrets.DEPLOY_PORT }} -avzr --delete --exclude={".git",".github"} scripts/ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:~/scripts/
-    - name: clean ssh key
-      run: rm -rf ~/.ssh
+      - name: install ssh key # https://github.com/shimataro/ssh-key-action/ - support checkout of private repos
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.DEPLOY_KEY }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+      - name: set up workspace
+        uses: actions/checkout@v4
+        with:
+          ssh-key: ${{ secrets.DEPLOY_KEY }}
+          submodules: true
+          show-progress: true
+      - name: force script execution permissions
+        run: chmod +x -R scripts/*
+      - name: rsync lgsm config deployment
+        run: rsync --port=${{ secrets.DEPLOY_PORT }} -avzr vhserver/ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:~/lgsm/config-lgsm/vhserver/
+      - name: rsync unity config deployment
+        run: rsync --port=${{ secrets.DEPLOY_PORT }} -avzr Valheim/ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:~/.config/unity3d/IronGate/Valheim/
+      - name: rsync scripts deployment
+        run: rsync --port=${{ secrets.DEPLOY_PORT }} -avzr --delete --exclude={".git",".github"} scripts/ ${{ secrets.DEPLOY_USER }}@${{ secrets.DEPLOY_HOST }}:~/scripts/
+      - name: clean ssh key
+        run: rm -rf ~/.ssh
