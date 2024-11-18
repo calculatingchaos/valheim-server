@@ -38,8 +38,8 @@ In concrete terms, the following are the effects of each difficulty setting:
 |        |   veryeasy   |     125%      |     50%      |        90%         |        100%         |
 |        |     easy     |     110%      |     75%      |        90%         |        100%         |
 |        | [**normal**] |     100%      |     100%     |        100%        |        100%         |
-|        |     hard     |      85%      |     150%     |        110%        |        120%         |
-| :star: |   veryhard   |      70%      |     200%     |        120%        |        140%         |
+| :star: |     hard     |      85%      |     150%     |        110%        |        120%         |
+|        |   veryhard   |      70%      |     200%     |        120%        |        140%         |
 
 > Example: `-modifier combat veryeasy`
 
